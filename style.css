@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Space+Mono:wght@400;700&display=swap');
+
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.mobile-container{
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+.fav-container{
+    background: rgb(251, 208, 208);
+    padding-bottom: 3rem;
+}
+.fav-container h3{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.unstyled{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.unstyled li{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.unstyled img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;;
+}
+.unstyled span{
+    display: inline-block;
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: -1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 3rem;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    width: 50%;
+    margin: 3rem auto;
+    position: relative;
+}
+
+#search{
+    padding: 0.5rem 0;
+    flex: 1; 
+     outline: none;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: 0rem 0.3rem 0.4rem  rgba(0, 0, 0, 0.179);
+    padding-left: 1rem;
+}
+
+#search-icon{
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+#meals{
+    margin-top: 3rem;
+    box-shadow: 0rem 0.3rem 0.4rem  rgba(0,0,0,0.3);
+}
+
+.meal-header{
+    position: relative;
+    max-width: 100%;
+    height: 20rem;
+}
+.meal-header h3{
+    text-align: center;
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+    background: #fff;
+    font-size: 0.8rem;
+}
+.meal-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.meal-body {
+    display: flex;
+    justify-content: space-between;
+    padding:1rem;
+}
+.meal-body h4{
+    font-size: 0.8rem;
+}
+.fav-btn.active .fa-heart{
+    color: red;
+}
+.fa-heart{
+    color: grey;
+}
+.meal-info-container{
+    background: #0000001e;
+    width: 100vw;
+    min-height: 40vh;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+   
+}
+#meal-info{
+    max-width: 50rem;
+    background: #fff;
+ position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 1rem;
+font-size: 0.7rem;
+max-height: 80vh;
+overflow: scroll;
+}
+#meal-info h1{
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+.ingredients p{
+    line-height: 1.2rem;
+    padding: 2rem 0;
+}
+.ingredients h3{
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+#close-popup{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgb(207, 207, 207);
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+}
+.fa-window-close{
+    position: absolute;
+    top: -0.5rem;
+    right: -0.2rem;
+}
+.fa-times{
+    color: rgb(108, 105, 105);
+}
+#meal-info img{
+    max-width: 100%;
+}
+.meal-info-container.hidden{
+    display: none;
+}
+.ing-styled{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-container{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .meal-header{
+        height: 10rem;
+    }
+    #meal-info{
+        width: 30rem;
+    }
+}
